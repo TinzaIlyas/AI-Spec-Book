@@ -1,0 +1,27 @@
+---
+title: "Physical AI & Humanoid Robotics"
+subtitle: "A Comprehensive Guide in Roman Urdu"
+author: "Technical Publisher"
+date: "December 2025"
+lang: "ur"
+mainfont: "Times New Roman"
+papersize: "a4"
+geometry: "margin=1in"
+documentclass: "book"
+classoption: "openright"
+colorlinks: true
+linkcolor: blue
+urlcolor: blue
+header-includes:
+  - \usepackage{fontspec}
+  - \newfontfamily\urdufont[Script=Arabic]{Jameel Noori Nastaleeq}
+  - \usepackage{bidi}
+---
+
+# Physical AI & Humanoid Robotics
+
+## Important Note
+
+This document is generated from Markdown files and is meant to be processed with Pandoc to create a properly formatted PDF. The actual book content will be included during the conversion process.
+
+The book contains comprehensive coverage of Physical AI and Humanoid Robotics concepts in Roman Urdu, with practical examples and hands-on projects.

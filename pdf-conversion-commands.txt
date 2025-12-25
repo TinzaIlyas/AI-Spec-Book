@@ -1,0 +1,80 @@
+# PDF Conversion Commands for Physical AI & Humanoid Robotics Book
+
+## Windows Commands
+
+### Prerequisites Installation:
+1. Install Pandoc: Download from https://github.com/jgm/pandoc/releases
+2. Install MiKTeX: https://miktex.org/download (for PDF generation)
+3. Install a suitable font for Roman Urdu (e.g., Times New Roman)
+
+### Convert Docusaurus Book to Single PDF:
+
+# Method 1: Simple concatenation approach
+pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections
+
+# Method 2: Using a metadata file with custom styling
+pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_Print.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Times New Roman"
+
+# Method 3: Create a single markdown file first, then convert to PDF
+# First, combine all markdown files in the correct order:
+type docs\intro.md docs\module1-introduction.md docs\module2-machine-learning.md docs\module3-bipedal-locomotion.md docs\module4-sensor-fusion.md docs\capstone-design-challenge.md docs\hardware-selection.md docs\deployment-guide.md > combined-book.md
+
+# Then convert the combined file to PDF:
+pandoc combined-book.md -o "Physical_AI_Humanoid_Robotics_Combined.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in"
+
+## Linux/Mac Commands
+
+### Prerequisites Installation:
+# On Ubuntu/Debian:
+sudo apt-get install pandoc texlive-full
+
+# On macOS:
+brew install pandoc
+brew install --cask mactex
+
+### Convert Docusaurus Book to Single PDF:
+
+# Method 1: Simple concatenation approach
+pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections
+
+# Method 2: Using a metadata file with custom styling
+pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_Print.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Times New Roman"
+
+# Method 3: Create a single markdown file first, then convert to PDF
+# First, combine all markdown files in the correct order:
+cat docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md > combined-book.md
+
+# Then convert the combined file to PDF:
+pandoc combined-book.md -o "Physical_AI_Humanoid_Robotics_Combined.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in"
+
+## Alternative: Using Docusaurus PDF Plugin
+
+# Install the plugin:
+npm install @docusaurus/plugin-preset-classic @docusaurus/theme-live-codeblock
+
+# Add to docusaurus.config.js:
+# module.exports = {
+#   plugins: [
+#     [
+#       '@docusaurus/plugin-client-redirects',
+#       {
+#         redirects: [
+#           {
+#             to: '/pdf/physical-ai-humanoid-robotics.pdf',
+#             from: '/physical-ai-humanoid-robotics-pdf',
+#           },
+#         ],
+#       },
+#     ],
+#   ],
+# };
+
+## For Better Roman Urdu Support
+
+# If you need better Arabic/Roman Urdu font support, install additional fonts:
+# On Windows: Install Arial Unicode MS or other Unicode fonts
+# On Linux: sudo apt-get install fonts-hosny-amiri fonts-freefont-otf
+# On macOS: Use system fonts like Geeza Pro
+
+# Then use with specific font settings:
+pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_RTL.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Arial Unicode MS"
