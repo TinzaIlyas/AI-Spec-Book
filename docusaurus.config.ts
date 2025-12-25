@@ -12,8 +12,8 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://github.com/TinzaIlyas',
-  baseUrl: '/physical-ai-humanoid-robotics/',
+  url: 'https://your-github-username.github.io',
+  baseUrl: '/',
 
   organizationName: 'your-github-username',
   projectName: 'physical-ai-humanoid-robotics',
@@ -113,7 +113,7 @@ const config: Config = {
             },
             {
               label: 'AI Discord',
-              href: '',
+              href: 'https://discord.gg/ai',
             },
             {
               label: 'X',
