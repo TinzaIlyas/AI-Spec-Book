@@ -10,14 +10,14 @@
 ### Convert Docusaurus Book to Single PDF:
 
 # Method 1: Simple concatenation approach
-pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections
+pandoc docs/Introduction/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections
 
 # Method 2: Using a metadata file with custom styling
-pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_Print.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Times New Roman"
+pandoc docs/Introduction/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_Print.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Times New Roman"
 
 # Method 3: Create a single markdown file first, then convert to PDF
 # First, combine all markdown files in the correct order:
-type docs\intro.md docs\module1-introduction.md docs\module2-machine-learning.md docs\module3-bipedal-locomotion.md docs\module4-sensor-fusion.md docs\capstone-design-challenge.md docs\hardware-selection.md docs\deployment-guide.md > combined-book.md
+type docs\Introduction\intro.md docs\module1-introduction.md docs\module2-machine-learning.md docs\module3-bipedal-locomotion.md docs\module4-sensor-fusion.md docs\capstone-design-challenge.md docs\hardware-selection.md docs\deployment-guide.md > combined-book.md
 
 # Then convert the combined file to PDF:
 pandoc combined-book.md -o "Physical_AI_Humanoid_Robotics_Combined.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in"
@@ -35,14 +35,14 @@ brew install --cask mactex
 ### Convert Docusaurus Book to Single PDF:
 
 # Method 1: Simple concatenation approach
-pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections
+pandoc docs/Introduction/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections
 
 # Method 2: Using a metadata file with custom styling
-pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_Print.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Times New Roman"
+pandoc docs/Introduction/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_Print.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Times New Roman"
 
 # Method 3: Create a single markdown file first, then convert to PDF
 # First, combine all markdown files in the correct order:
-cat docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md > combined-book.md
+cat docs/Introduction/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md > combined-book.md
 
 # Then convert the combined file to PDF:
 pandoc combined-book.md -o "Physical_AI_Humanoid_Robotics_Combined.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in"
@@ -77,4 +77,4 @@ npm install @docusaurus/plugin-preset-classic @docusaurus/theme-live-codeblock
 # On macOS: Use system fonts like Geeza Pro
 
 # Then use with specific font settings:
-pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_RTL.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Arial Unicode MS"
+pandoc docs/Introduction/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_RTL.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Arial Unicode MS"

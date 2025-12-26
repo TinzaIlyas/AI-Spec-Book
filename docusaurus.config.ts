@@ -12,11 +12,11 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-github-username.github.io',
-  baseUrl: '/',
+  url: 'https://tinzailelyas.github.io',
+  baseUrl: '/AI-Spec-Book/',
 
-  organizationName: 'your-github-username',
-  projectName: 'physical-ai-humanoid-robotics',
+  organizationName: 'TinzaIlyas',
+  projectName: 'AI-Spec-Book',
 
   onBrokenLinks: 'throw',
 
@@ -38,7 +38,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/your-github-username/physical-ai-humanoid-robotics',
+            'https://github.com/TinzaIlyas/AI-Spec-Book',
         },
         blog: {
           showReadingTime: true,
@@ -47,7 +47,7 @@ const config: Config = {
             xslt: true,
           },
           editUrl:
-            'https://github.com/your-github-username/physical-ai-humanoid-robotics',
+            'https://github.com/TinzaIlyas/AI-Spec-Book',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -85,7 +85,7 @@ const config: Config = {
           position: 'left',
         },
         {
-          href: 'https://github.com/your-github-username/physical-ai-humanoid-robotics',
+          href: 'https://github.com/TinzaIlyas/AI-Spec-Book',
           label: 'GitHub',
           position: 'right',
         },
@@ -100,7 +100,7 @@ const config: Config = {
           items: [
             {
               label: 'Introduction',
-              to: '/docs/intro',
+              to: '/docs/Introduction/intro',
             },
           ],
         },
@@ -113,7 +113,7 @@ const config: Config = {
             },
             {
               label: 'AI Discord',
-              href: 'https://discord.gg/ai',
+              href: 'https://discord.com/channels/@me',
             },
             {
               label: 'X',
@@ -130,7 +130,7 @@ const config: Config = {
             },
             {
               label: 'GitHub Repository',
-              href: 'https://github.com/your-github-username/physical-ai-humanoid-robotics',
+              href: 'https://github.com/TinzaIlyas/AI-Spec-Book',
             },
           ],
         },

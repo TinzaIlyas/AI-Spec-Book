@@ -116,7 +116,7 @@ find docs -name "*.md" -exec markdown-link-check {} \;
 1. After content updates, regenerate the PDF using the same commands:
    ```bash
    # Windows
-   pandoc docs/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_v1.1.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Times New Roman"
+   pandoc docs/Introduction/intro.md docs/module1-introduction.md docs/module2-machine-learning.md docs/module3-bipedal-locomotion.md docs/module4-sensor-fusion.md docs/capstone-design-challenge.md docs/hardware-selection.md docs/deployment-guide.md -o "Physical_AI_Humanoid_Robotics_v1.1.pdf" --pdf-engine=xelatex --template=templates/roman-urdu-template.tex --metadata-file=metadata.yaml --toc --toc-depth=2 --number-sections --variable=geometry:"a4paper,margin=1in" --variable=mainfont:"Times New Roman"
    ```
 
 2. Update the version number in the filename
